@@ -1,0 +1,7 @@
+
+            <div class="layui-form-item">
+                <label class="layui-form-label" for="{{field.name}}-field">{{field.Name}}</label>
+                <div class="layui-input-block">
+                    <input type="text" name="{{field.Name}}" id="{{field.name}}-field" lay-verify="required" autocomplete="off" placeholder="请输入{{field.Name}}" class="layui-input" value="{{ old('{{field.name}}',${{model}}->{{field.name}}) }}" >
+                </div>
+            </div>

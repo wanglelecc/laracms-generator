@@ -1,0 +1,3 @@
+@if (count($errors) > 0)
+    <script>layer.alert('@foreach ($errors->all() as $error) {{ $error }} <br /> @endforeach', {icon: 2,time:3000});</script>
+@endif

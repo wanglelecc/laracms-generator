@@ -1,0 +1,7 @@
+
+            <div class="form-group has-feedback  has-icon-right">
+                <label class="col-md-2 col-sm-2 control-label" for="{{field.name}}-field">{{field.Name}}</label>
+                <div class="col-md-8 col-sm-10">
+                    <textarea  name="{{field.name}}" id="{{field.name}}-field" class="form-control editor">{{ old('{{field.name}}', ${{model}}->{{field.name}} ) }}</textarea>
+                </div>
+            </div>

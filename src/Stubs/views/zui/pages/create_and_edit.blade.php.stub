@@ -1,0 +1,39 @@
+@extends('backend::layouts.app')
+
+@section('title', $title = ${{model}}->id ? '编辑' : '添加' )
+
+@section('breadcrumb')
+    <li><a href="javascript:;">站点设置</a></li>
+    <li><a href="javascript:;">{{model}}</a></li>
+    <li class="active">{{$title}}</li>
+@endsection
+
+@section('content')
+<h2 class="header-dividing">{{$title}} <small></small></h2>
+
+<div class="row">
+     <div class="col-md-12">
+        <div class="panel">
+             <div class="panel-body">
+                <form id="form-validator" class="form-horizontal" method="POST" action="{{ ${{model}}->id ? route('{{prefix}}{{models}}.update', ${{model}}->id) : route('{{prefix}}{{models}}.store') }}">
+                    {{ csrf_field() }}
+                    <input type="hidden" name="_method" value="{{ ${{prefix}}{{model}}->id ? 'PATCH' : 'POST' }}">
+
+                    {{form_fields_fillable}}
+
+                    <div class="form-group">
+                        <div class="col-md-offset-2 col-md-5 col-sm-10">
+                            <button class="layui-btn" lay-submit="" lay-filter="demo1">提交</button>
+                            <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+@endsection
+
+@section('scripts')
+@endsection

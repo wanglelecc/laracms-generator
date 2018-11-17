@@ -1,0 +1,2 @@
+
+<td class="text-center">{{${{model}}->{{field.name}}}}</td>

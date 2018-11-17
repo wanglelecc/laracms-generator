@@ -1,0 +1,7 @@
+
+            <div class="layui-form-item layui-form-text">
+                <label class="layui-form-label" for="{{field.name}}-field">{{field.Name}}</label>
+                <div class="layui-input-block">
+                    <textarea  name="{{field.name}}" id="{{field.name}}-field" lay-verify="required" placeholder="{{field.Name}}" class="layui-textarea">{{ old('{{field.name}}', ${{model}}->{{field.name}} ) }}</textarea>
+                </div>
+            </div>

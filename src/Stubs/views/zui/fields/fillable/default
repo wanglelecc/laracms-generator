@@ -1,0 +1,7 @@
+
+            <div class="form-group has-feedback  has-icon-right">
+                <label class="col-md-2 col-sm-2 control-label" for="{{field.name}}-field">{{field.Name}}</label>
+                <div class="col-md-5 col-sm-10">
+                    <input type="text" name="{{field.Name}}" id="{{field.name}}-field"  autocomplete="off" placeholder="请输入{{field.Name}}" class="form-control" value="{{ old('{{field.name}}',${{model}}->{{field.name}}) }}" >
+                </div>
+            </div>
